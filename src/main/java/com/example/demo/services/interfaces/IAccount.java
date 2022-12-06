@@ -3,15 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.demo.repo;
+package com.example.demo.services.interfaces;
 
+import com.example.demo.dto.request.RegisterRequest;
 import com.example.demo.entities.Account;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
  * @author PCvinhvizg
  */
-public interface AccountRepo extends JpaRepository<Account, String> {
-    Account findByUsername(String username);
+public interface IAccount {
+
+    boolean registerAccount(RegisterRequest registerRequest);
+    
+    Account getAccount(String username);
 }
