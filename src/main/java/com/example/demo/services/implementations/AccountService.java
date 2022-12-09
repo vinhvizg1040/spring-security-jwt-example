@@ -5,11 +5,13 @@
  */
 package com.example.demo.services.implementations;
 
+import com.example.demo.dto.enums.Roles;
 import com.example.demo.dto.request.RegisterRequest;
 import com.example.demo.entities.Account;
 import com.example.demo.repo.AccountRepo;
 import com.example.demo.services.interfaces.IAccount;
 import com.example.demo.utils.ModelMapperUtil;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -50,6 +52,4 @@ public class AccountService implements IAccount {
     public Account getAccount(String username) {
         return accountRepo.findByUsername(username);
     }
-    
-    
 }

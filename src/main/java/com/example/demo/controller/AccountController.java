@@ -9,6 +9,7 @@ import com.example.demo.configuration.MyUserDetailsService;
 import com.example.demo.dto.enums.Roles;
 import com.example.demo.dto.request.AuthenticationRequest;
 import com.example.demo.dto.request.RegisterRequest;
+import com.example.demo.dto.response.GetUsersResponse;
 import com.example.demo.dto.response.LoginResponse;
 import com.example.demo.entities.Account;
 import com.example.demo.entities.Profile;
@@ -25,6 +26,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,7 +38,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author PCvinhvizg
  */
 @RestController
-public class HomeController {
+public class AccountController {
 
     @Autowired
     private AuthenticationManager authenticationManager;

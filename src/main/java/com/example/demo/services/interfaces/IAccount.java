@@ -7,6 +7,7 @@ package com.example.demo.services.interfaces;
 
 import com.example.demo.dto.request.RegisterRequest;
 import com.example.demo.entities.Account;
+import java.util.List;
 
 /**
  *
